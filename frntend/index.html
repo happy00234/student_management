@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post request</title>
+</head>
+<body>
+    <p>Name</p>
+    <input type="text" placeholder="your name" id="namefromform">
+    <p>Age</p>
+    <input type="text" placeholder="your age" id="agefromform">
+    <button id="btn">post data</button>
+    <script>
+        const btn=document.querySelector("#btn")
+        btn.addEventListener("click",function(){
+            const name=document.querySelector("#namefromform").value;
+            const age=document.querySelector("#agefromform").value;
+            console.log(name,age);
+            const data={
+                name:name,
+                age:age
+            }
+            console.log(typeof(data),data);
+        });
+    </script>
+</body>
+</html>
